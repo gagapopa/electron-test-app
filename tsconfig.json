@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "jsx": "preserve",
+    "jsx": "react",
     "sourceMap": true,
+    "inlineSources": true,
     "moduleResolution": "node"
   }
 }
