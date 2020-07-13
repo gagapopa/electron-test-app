@@ -15,6 +15,9 @@ app.on('ready', async () => {
 
     mainWindow.once('ready-to-show', () => {
         mainWindow.show()
+        if (isDev) {
+            mainWindow.webContents.openDevTools()
+        }
     })
 
     const devPath = 'http://localhost:1124'
@@ -24,7 +27,6 @@ app.on('ready', async () => {
         slashes: true
     })
     const url = isDev ? devPath : prodPath
-
 
     mainWindow.setMenu(null)
     mainWindow.loadURL(url)
